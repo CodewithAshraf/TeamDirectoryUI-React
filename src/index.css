@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0e0e0e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  min-height: 100vh;
+}
+
+.parent {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  height: 530px;
+  width: 330px;
+  border-radius: 32px;
+  background-image: url('https://cloudfront.slrlounge.com/wp-content/uploads/2020/11/1-mens-posing-tips.jpg');
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Shorter, tighter blur + dark fade */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 38%; /* Decreased from 42% */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(10, 10, 10, 0.82) 38%,
+    rgba(10, 10, 10, 0.96) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 28%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 28%);
+  z-index: 1;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 16px 20px 18px; /* Slightly tighter padding */
+  color: #ffffff;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px; /* Reduced from 8px */
+}
+
+.name-row h2 {
+  font-size: 19px; /* Scaled slightly from 21px */
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+
+.verified-badge {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.bio {
+  font-size: 12.5px; /* Scaled slightly from 13.5px */
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 12px; /* Reduced from 20px */
+}
+
+/* Stats Section */
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px; /* Reduced from 20px */
+  padding: 0 4px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px; /* Reduced from 4px */
+}
+
+.stat-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-icon {
+  color: #f5a623;
+  font-size: 15px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.divider {
+  width: 1px;
+  height: 24px; /* Reduced from 28px */
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Buttons Row */
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-btn {
+  flex: 1;
+  height: 42px; /* Reduced from 48px */
+  background-color: #ffffff;
+  color: #111111;
+  border: none;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.contact-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.bookmark-btn {
+  width: 42px; /* Reduced from 48px */
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.bookmark-btn:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.title{
+  color: white;
+  margin: 30px;
+  text-align: center;
+  font-size: 50px;
+}
